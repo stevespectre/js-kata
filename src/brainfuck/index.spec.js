@@ -6,7 +6,7 @@
 
 const Brainfuck = require('./index');
 
-describe.skip('Brainfuck', function() {
+describe('Brainfuck', function() {
 
   let subject;
 
@@ -14,8 +14,8 @@ describe.skip('Brainfuck', function() {
     subject = Brainfuck.create();
   });
 
-  describe('calculate', function() {
-    it('should convert number of chars into ASCII char', function() {
+  describe('decode', function() {
+    it.only('should convert number of chars into ASCII char', function() {
       const result = subject.decode('+++++++++++++++++++++++++++++++++++++++++++++++++.');
       expect(result).to.be.equal('1');
     });
